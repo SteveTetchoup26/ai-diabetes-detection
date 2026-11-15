@@ -2,7 +2,11 @@
 
 Application web Streamlit qui explore un jeu de données médical et entraîne deux modèles de classification pour prédire si une personne est diabétique.
 
+**Démo en ligne : https://ai-diabetes-detection.streamlit.app/**
+
 > Les prédictions n'ont aucune valeur médicale et ne remplacent pas un diagnostic.
+
+![Page d'accueil de l'application](screenshots/01-home.png)
 
 ## Ce que fait l'application
 
@@ -17,7 +21,17 @@ L'application comporte quatre pages, accessibles depuis la barre latérale :
 
 Pour chaque modèle, l'application affiche l'exactitude, la matrice de confusion et le rapport de classification (précision, rappel, F1).
 
-Avec les variables par défaut (glucose et IMC) et 20 % des données en test, la régression logistique atteint une exactitude de 0,76 et l'arbre de décision 0,63.
+Avec les variables par défaut (glucose et IMC) et 20 % des données en test, la régression logistique atteint une exactitude de 0,76. L'arbre de décision tourne autour de 0,65 ; son score varie légèrement d'un entraînement à l'autre.
+
+## Aperçu
+
+| Carte de corrélation | Distribution du glucose selon le diagnostic |
+|---|---|
+| ![Carte de corrélation](screenshots/02-correlation-heatmap.png) | ![Distribution du glucose](screenshots/03-glucose-distribution.png) |
+
+| Régression logistique | Arbre de décision |
+|---|---|
+| ![Régression logistique](screenshots/04-logistic-regression.png) | ![Arbre de décision](screenshots/05-decision-tree.png) |
 
 ## Les données
 
@@ -65,6 +79,7 @@ L'application s'ouvre sur http://localhost:8501.
 | `app.py` | L'application, commentée en français étape par étape |
 | `diabetes.csv` | Le jeu de données |
 | `requirements.txt` | Les dépendances Python |
+| `screenshots/` | Les captures d'écran de l'application |
 
 ## Technologies
 
